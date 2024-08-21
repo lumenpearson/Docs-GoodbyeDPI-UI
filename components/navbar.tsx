@@ -58,6 +58,7 @@ export const Navbar = memo(() => {
 		</nav>
 	);
 })
+Navbar.displayName = "Navbar";
 
 export const Logo = memo(() => {
 	return (
@@ -69,7 +70,6 @@ export const Logo = memo(() => {
 })
 Logo.displayName = "Logo";
 
-// @ts-ignore
 export const NavMenu = ({ isSheet = false }) => {
 	return (
 		<>
