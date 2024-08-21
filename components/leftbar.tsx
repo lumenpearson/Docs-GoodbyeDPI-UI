@@ -58,7 +58,7 @@ function Menu({ isSheet = false }) {
 		<>
 			{ROUTES.map(({ href, items, title }) => (
 				<div className="flex flex-col gap-3 mt-5" key={href}>
-					<h4 className="font-medium sm:text-sm">{title}</h4>
+					<h4 className="font-bold sm:text-lg">{title}</h4>
 					<div className="flex flex-col gap-3 sm:text-sm dark:text-neutral-300/85 text-neutral-800 ml-0.5">
 						{items.map((subItem) => {
 							const key = `/docs/${href}${subItem.href}`;

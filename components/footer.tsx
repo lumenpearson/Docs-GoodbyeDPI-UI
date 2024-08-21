@@ -12,14 +12,14 @@ export function Footer() {
 						Build by{" "}
 						<Link
 							className="px-1 underline underline-offset-2"
-							href="https://github.com/Storik4Pro"
+							href="https://github.com/lumenpearson/FAQ-GoodbyeDPI-UI"
 						>
 							CodeIlluminators
 						</Link>
 						. The source code is available on{" "}
 						<Link
 							className="px-1 underline underline-offset-2"
-							href="https://github.com/CodeIlluminators/FAQ-GoodByeDPI-UI"
+							href="https://github.com/lumenpearson/FAQ-GoodbyeDPI-UI"
 						>
 							GitHub
 						</Link>

@@ -54,7 +54,7 @@ export default function Search() {
 						<SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-neutral-500 dark:text-neutral-400" />
 						<Input
 							className="w-full rounded-md bg-muted border h-9 pl-10 pr-4 text-sm shadow-sm "
-							placeholder="Search documentation..."
+							placeholder="Искать в документации..."
 							type="search"
 						/>
 						<div className="sm:flex hidden absolute top-1/2 -translate-y-1/2 right-2 text-xs font-medium font-mono items-center gap-0.5 dark:bg-neutral-700 bg-zinc-200 p-1 rounded-sm">
@@ -68,7 +68,7 @@ export default function Search() {
 						<input
 							value={searchedInput}
 							onChange={(e) => setSearchedInput(e.target.value)}
-							placeholder="Type something to search..."
+							placeholder="Пишите чтобы начать искать..."
 							autoFocus
 							className="h-14 px-4 bg-transparent border-b text-[15px] outline-none"
 						/>

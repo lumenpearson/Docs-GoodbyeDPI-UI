@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ComponentProps } from "react";
+import {ComponentProps, memo} from "react";
 import { cn } from "@/lib/utils";
 
 type AnchorProps = ComponentProps<typeof Link> & {
@@ -11,14 +11,14 @@ type AnchorProps = ComponentProps<typeof Link> & {
 	disabled?: boolean;
 };
 
-export default function Anchor({
+const Anchor = memo(({
 	absolute,
 	className = "",
 	activeClassName = "",
 	disabled,
 	children,
 	...props
-}: AnchorProps) {
+}: AnchorProps) => {
 	const path = usePathname();
 	const isMatch = absolute
 		? props.href.toString().split("/")[1] == path.split("/")[1]
@@ -33,4 +33,8 @@ export default function Anchor({
 			{children}
 		</Link>
 	);
-}
+})
+
+Anchor.displayName = "Anchor";
+
+export default Anchor;

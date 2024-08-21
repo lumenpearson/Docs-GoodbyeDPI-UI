@@ -1,50 +1,34 @@
 // for page navigation & to sort on leftbar
 export const ROUTES = [
 	{
-		title: "Getting Started",
+		title: "Начало работы",
 		href: "getting-started",
 		items: [
-			{ title: "Introduction", href: "/introduction" },
-			{ title: "Installation", href: "/installation" },
-			{ title: "Quick Start Guide", href: "/quick-start-guide" },
-			{ title: "Project Structure", href: "/project-structure" },
-			{ title: "Changelog", href: "/changelog" },
-			{ title: "FAQ", href: "/faq" },
+			{ title: "Знакомство", href: "/introduction" },
+            { title: "Структура проекта", href: "/project-structure" },
+			{ title: "Инсталляция", href: "/installation" },
+			{ title: "Краткое руководство", href: "/quick-start-guide" },
+            { title: "Обновления", href: "/updates" },
+			{ title: "Журнал изменений", href: "/changelog" },
 		],
 	},
-	{
-		title: "Server Actions",
-		href: "server-actions",
-		items: [
-			{ title: "getSession", href: "/getSession" },
-			{ title: "getToken", href: "/getToken" },
-			{ title: "getRole", href: "/getRole" },
-		],
-	},
-	{
-		title: "React Hooks",
-		href: "react-hooks",
-		items: [
-			{ title: "useSession", href: "/use-session" },
-
-			{ title: "useFetch", href: "/use-fetch" },
-			{ title: "useAuth", href: "/use-auth" },
-			{ title: "useProduct", href: "/use-product" },
-			{ title: "useOrder", href: "/use-order" },
-			{ title: "useCart", href: "/use-cart" },
-			{ title: "usePayment", href: "/use-payment" },
-			{ title: "useShipping", href: "/use-shipping" },
-			{ title: "useNotification", href: "/use-notification" },
-			{ title: "useReview", href: "/use-review" },
-			{ title: "useInventory", href: "/use-inventory" },
-			{ title: "useUser", href: "/use-user" },
-			{ title: "useSettings", href: "/use-settings" },
-			{ title: "useAnalytics", href: "/use-analytics" },
-			{ title: "useTheme", href: "/use-theme" },
-			{ title: "useRouter", href: "/use-router" },
-			{ title: "useData", href: "/use-data" },
-		],
-	},
+    {
+        title: "FAQ",
+        href: "faq",
+        items: [
+            { title: "Q&A", href: "/qna" },
+            { title: "Деинсталляция", href: "/deinstallation" },
+        ],
+    },
+    {
+        title: "О нас",
+        href: "about",
+        items: [
+            { title: "Реквизиты", href: "/contact" },
+            { title: "Благодарности", href: "/acknowledgments" },
+            { title: "Лицензия", href: "/license" },
+        ],
+    }
 ];
 
 export const page_routes = ROUTES.map(({ href, items }) =>
