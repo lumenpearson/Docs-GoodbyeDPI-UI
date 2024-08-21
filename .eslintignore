@@ -1,0 +1,47 @@
+# Ignore the node_modules directory, where all third-party packages are installed
+node_modules/
+
+# Ignore the build directory, if you have one
+build/
+dist/
+.out/
+
+# Ignore all configuration files in the root directory
+# This includes ESLint, Prettier, Babel, Stylelint, and other config files
+/*.config.js
+/*.config.cjs
+/*.config.mjs
+/.eslintrc.js
+/.prettierrc.js
+/.babelrc.js
+/.stylelintrc.js
+
+# Ignore environment variable files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Ignore lock files
+package-lock.json
+yarn.lock
+
+# Ignore log files
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Ignore coverage directory used by testing tools
+coverage/
+
+# Ignore temporary files or directories
+.DS_Store
+Thumbs.db
+
+# Ignore IDE specific files
+/.vscode/
+/.idea/
+/*.iml
+
+# Ignore any other unwanted files or directories

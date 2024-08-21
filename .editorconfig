@@ -1,0 +1,40 @@
+# Editorconfig Settings
+
+# top-most EditorConfig file
+root = true
+
+# Don't use tabs for indentation.
+[*]
+charset = utf-8
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+end_of_line = lf
+
+[*.{js,json}]
+indent_style = space
+indent_size = 2
+
+[*.{html,xml,xsd}]
+max_line_length = off
+end_of_line = lf
+indent_style = tab
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+indent_size = 2
+
+
+# Project files
+[*.{csproj,vbproj,vcxproj,vcxproj.filters,proj,projitems,shproj}]
+indent_size = 2
+
+# Config files
+[*.{props,targets,ruleset,config,nuspec,resx,vsixmanifest,vsct}]
+indent_size = 2
+
+
+# Shell script files
+[*.sh]
+end_of_line = lf
+indent_size = 2

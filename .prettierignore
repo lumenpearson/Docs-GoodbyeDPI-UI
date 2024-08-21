@@ -1,0 +1,9 @@
+node_modules
+.husky
+/coverage
+.prettierignore
+.stylelintignore
+.editorconfig
+.eslintignore
+.pnpmignore
+.pnpmrc
