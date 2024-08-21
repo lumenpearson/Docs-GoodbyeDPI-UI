@@ -15,13 +15,17 @@ export const NAVLINKS = [
 		href: `/docs/${page_routes[0].href}`,
 	},
 	{
-		title: "Релизы",
-		href: "https://github.com/Storik4pro/goodbyeDPI-UI/releases",
-	},
-	{
 		title: "Q&A",
 		href: `/docs/faq/qna`,
 	},
+	{
+		title: "Релизы",
+		href: "https://github.com/Storik4pro/goodbyeDPI-UI/releases",
+	},
+    {
+        title: "Поддержка",
+        href: "https://github.com/Storik4pro/goodbyeDPI-UI/issues",
+    },
 ];
 
 export const Navbar = memo(() => {
