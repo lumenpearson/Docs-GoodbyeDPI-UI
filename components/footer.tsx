@@ -12,7 +12,7 @@ export function Footer() {
 						Build by{" "}
 						<Link
 							className="px-1 underline underline-offset-2"
-							href="https://github.com/lumenpearson/FAQ-GoodbyeDPI-UI"
+							href="https://github.com/CodeIlluminators"
 						>
 							CodeIlluminators
 						</Link>
