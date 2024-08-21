@@ -22,6 +22,10 @@ export const NAVLINKS = [
 		title: "Q&A",
 		href: `/docs/faq/qna`,
 	},
+    {
+        title: "Поддержка",
+        href: "https://github.com/Storik4pro/goodbyeDPI-UI/issues",
+    },
 ];
 
 export const Navbar = memo(() => {
