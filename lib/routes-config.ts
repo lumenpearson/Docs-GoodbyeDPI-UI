@@ -5,8 +5,8 @@ export const ROUTES = [
 		href: "getting-started",
 		items: [
 			{ title: "Знакомство", href: "/introduction" },
-            { title: "Структура проекта", href: "/project-structure" },
 			{ title: "Инсталляция", href: "/installation" },
+            { title: "Структура проекта", href: "/project-structure" },
 			{ title: "Краткое руководство", href: "/quick-start-guide" },
             { title: "Обновления", href: "/updates" },
 			{ title: "Журнал изменений", href: "/changelog" },
