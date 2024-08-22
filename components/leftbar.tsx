@@ -9,7 +9,8 @@ import {
 	SheetHeader,
 	SheetTrigger,
 } from "@/components/ui/sheet";
-import { Logo, NavMenu } from "./navbar";
+import Logo from "./logo";
+import { NavMenu } from "./navbar";
 import { Button } from "./ui/button";
 import { FooterButtons } from "./footer";
 
@@ -32,7 +33,7 @@ export function SheetLeftbar() {
 				</Button>
 			</SheetTrigger>
 			<SheetContent className="flex flex-col gap-4 px-0" side="left">
-				<SheetHeader>
+				<SheetHeader className="flex flex-col mt-3 mx-2 px-5">
 					<SheetClose className="px-5" asChild>
 						<Logo />
 					</SheetClose>
@@ -58,8 +59,8 @@ function Menu({ isSheet = false }) {
 		<>
 			{ROUTES.map(({ href, items, title }) => (
 				<div className="flex flex-col gap-3 mt-5" key={href}>
-					<h4 className="font-bold sm:text-lg">{title}</h4>
-					<div className="flex flex-col gap-3 sm:text-sm dark:text-neutral-300/85 text-neutral-800 ml-0.5">
+					<h4 className="font-bold lg:text-lg">{title}</h4>
+					<div className="flex flex-col gap-3 lg:text-sm dark:text-neutral-300/85 text-neutral-800 ml-0.5 sm:text-sm">
 						{items.map((subItem) => {
 							const key = `/docs/${href}${subItem.href}`;
 							const Comp = (

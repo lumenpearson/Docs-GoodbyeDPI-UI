@@ -1,12 +1,13 @@
-import { Github } from "lucide-react";
 import Link from "next/link";
-import { ModeToggle } from "@/components/theme-toggle";
-import { buttonVariants } from "./ui/button";
 import Search from "./search";
 import Anchor from "./anchor";
-import { SheetLeftbar } from "./leftbar";
+import { Github } from "lucide-react";
+import { buttonVariants } from "./ui/button";
 import { page_routes } from "@/lib/routes-config";
+import Logo from "@/components/logo";
+import { ModeToggle } from "@/components/theme-toggle";
 import { SheetClose } from "@/components/ui/sheet";
+import { SheetLeftbar } from "./leftbar";
 import {memo} from "react";
 
 export const NAVLINKS = [
@@ -64,16 +65,6 @@ export const Navbar = memo(() => {
 })
 Navbar.displayName = "Navbar";
 
-export const Logo = memo(() => {
-	return (
-		<Link href="/" className="flex items-center gap-2.5">
-			{/*<Image src={""} />*/}
-			<h2 className="text-md font-bold">GoodbyeDPI/UI</h2>
-		</Link>
-	);
-})
-Logo.displayName = "Logo";
-
 export const NavMenu = ({ isSheet = false }) => {
 	return (
 		<>
@@ -81,7 +72,7 @@ export const NavMenu = ({ isSheet = false }) => {
 				const Comp = (
 					<Anchor
 						key={item.title + item.href}
-                        className="font-medium hover:text-black dark:text-white"
+                        className="select-none font-medium hover:text-black dark:text-white"
 						absolute
 						href={item.href}
 					>

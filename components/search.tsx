@@ -1,6 +1,6 @@
 "use client";
 
-import { CommandIcon, FileTextIcon, SearchIcon } from "lucide-react";
+import { Command, FileTextIcon, SearchIcon } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { Input } from "@/components/ui/input";
 import {
@@ -41,7 +41,7 @@ export default function Search() {
 	);
 
 	return (
-		<div>
+		<>
 			<Dialog
 				open={isOpen}
 				onOpenChange={(open) => {
@@ -54,11 +54,11 @@ export default function Search() {
 						<SearchIcon className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-neutral-500 dark:text-neutral-400" />
 						<Input
 							className="w-full rounded-md bg-muted border h-9 pl-10 pr-4 text-sm shadow-sm "
-							placeholder="Искать в документации..."
+							placeholder="Поиск..."
 							type="search"
 						/>
-						<div className="sm:flex hidden absolute top-1/2 -translate-y-1/2 right-2 text-xs font-medium font-mono items-center gap-0.5 dark:bg-neutral-700 bg-zinc-200 p-1 rounded-sm">
-							<CommandIcon className="w-3 h-3" />
+						<div className="select-none sm:flex hidden absolute top-1/2 -translate-y-1/2 right-2 text-xs font-medium font-mono items-center gap-0.5 dark:bg-neutral-700 bg-zinc-200 p-1 rounded-sm">
+							<Command className="w-3 h-3" />
 							<span>k</span>
 						</div>
 					</div>
@@ -68,15 +68,16 @@ export default function Search() {
 						<input
 							value={searchedInput}
 							onChange={(e) => setSearchedInput(e.target.value)}
-							placeholder="Пишите чтобы начать искать..."
+							placeholder="Начните писать чтобы искать..."
 							autoFocus
 							className="h-14 px-4 bg-transparent border-b text-[15px] outline-none"
 						/>
 					</DialogHeader>
 					{filteredResults.length == 0 && searchedInput && (
 						<p className="text-muted-foreground mx-auto mt-2 text-sm">
-							No results found for{" "}
+							Нет результатов по запросу{" "}
 							<span className="text-primary">{`"${searchedInput}"`}</span>
+                            .
 						</p>
 					)}
 					<ScrollArea className="max-h-[350px]">
@@ -88,7 +89,7 @@ export default function Search() {
 									asChild
 								>
 									<Anchor
-										className="dark:hover:bg-neutral-900 hover:bg-neutral-100 w-full p-2.5 px-3 rounded-sm text-[15px] flex items-center gap-2.5"
+										className="select-none dark:hover:bg-neutral-900 hover:bg-neutral-100 w-full p-2.5 px-3 rounded-sm text-[15px] flex items-center gap-2.5"
 										href={`/docs/${item.href}`}
 										activeClassName="dark:bg-neutral-900 bg-neutral-100"
 									>
@@ -101,6 +102,6 @@ export default function Search() {
 					</ScrollArea>
 				</DialogContent>
 			</Dialog>
-		</div>
+		</>
 	);
 }
